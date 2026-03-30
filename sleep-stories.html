@@ -16,7 +16,7 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--ink); min-height: 100vh; overflow-x: hidden; }
 
-  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.88); backdrop-filter: blur(10px); border-bottom: 1px solid var(--primary-mid); }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; background: rgba(139,92,246,0.88); backdrop-filter: blur(10px); border-bottom: 1px solid var(--primary-mid); }
   .nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.1rem; color: var(--primary); display: none; cursor: pointer; }
   .nav-logo.visible { display: block; }
   .nav-tag { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; background: var(--primary); color: white; padding: 4px 12px; border-radius: 100px; }
@@ -55,7 +55,7 @@
   .card-body { padding: 1.4rem 1.6rem; flex: 1; }
   .card-top { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.8rem; }
   .card-avatar { width: 52px; height: 52px; border-radius: 50%; overflow: hidden; border: 2.5px solid var(--primary); flex-shrink: 0; }
-  .card-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+  .card-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
   .card-name { font-weight: 600; font-size: 1rem; display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
   .card-tag { font-size: 0.7rem; font-weight: 600; padding: 3px 10px; border-radius: 100px; background: var(--primary-light); color: var(--primary); }
   .card-quote { font-size: 0.92rem; color: #6B21A8; font-style: italic; line-height: 1.6; }
@@ -65,7 +65,7 @@
   .story-name-large { font-family: 'DM Serif Display', serif; font-size: 2.4rem; margin-bottom: 0.5rem; }
   .story-identity-badge { display: inline-block; font-size: 0.78rem; font-weight: 600; padding: 5px 14px; border-radius: 100px; border: 1.5px solid; margin-bottom: 2rem; }
   .portrait-wrap { width: 100%; height: 340px; border-radius: 20px; overflow: hidden; margin-bottom: 2rem; background: var(--primary-light); }
-  .portrait-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+  .portrait-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
   .story-body p { font-size: 1.05rem; line-height: 1.85; color: #6B21A8; margin-bottom: 1.4rem; }
   .story-highlight { border-left: 4px solid; padding: 1.2rem 1.5rem; border-radius: 0 12px 12px 0; font-size: 1.05rem; font-style: italic; font-weight: 500; line-height: 1.7; margin: 2rem 0; }
   .story-takeaway { border: 1.5px solid; border-radius: 16px; padding: 1.4rem 1.6rem; margin: 1.5rem 0; font-size: 0.95rem; line-height: 1.75; color: #6B21A8; }
@@ -116,15 +116,15 @@ const COLOR = {
   tagBg: "#DDD6FE",
   tagText: "#8B5CF6",
   hlBg: "#DDD6FE",
-  takeBg: "rgba(255,255,255,0.8)",
+  takeBg: "rgba(139,92,246,0.8)",
   border: "#8B5CF6"
 };
 
 const stories = [
   {
     name: "Catherine", age: 34, identity: "Chronic Insomnia",
-    avatar_url: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face",
-    portrait_url: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&h=500&fit=crop&crop=top",
+    avatar_url: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face",
+    portrait_url: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&h=500&fit=crop",
     quote: "I couldn't sleep and then I couldn't stop thinking about not being able to sleep.",
     story: [
       "Insomnia creates its own vicious cycle. You can't sleep, which makes you anxious about not sleeping, which makes it impossible to sleep. After months of this, your brain becomes conditioned to associate bed with anxiety rather than rest.",
@@ -138,8 +138,8 @@ const stories = [
   },
   {
     name: "Jeremy", age: 41, identity: "Sleep Apnea & Depression",
-    avatar_url: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=face",
-    portrait_url: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&h=500&fit=crop&crop=top",
+    avatar_url: "https://images.unsplash.com/photo-1524250502761-1ac6ce638bc8?w=200&h=200&fit=crop&crop=face",
+    portrait_url: "https://images.unsplash.com/photo-1524250502761-1ac6ce638bc8?w=800&h=500&fit=crop",
     quote: "My depression lifted when my sleep apnea was treated. It turned out I wasn't broken; I was just exhausted.",
     story: [
       "I had been dealing with what I thought was depression for years. Fatigue, low mood, difficulty concentrating, irritability. I had been to therapy and tried medications. Things would improve slightly and then slide back.",
@@ -153,8 +153,8 @@ const stories = [
   },
   {
     name: "Yuki", age: 28, identity: "Shift Work & Sleep",
-    avatar_url: "https://images.unsplash.com/photo-1488716820095-cbe80883c496?w=200&h=200&fit=crop&crop=face",
-    portrait_url: "https://images.unsplash.com/photo-1488716820095-cbe80883c496?w=800&h=500&fit=crop&crop=top",
+    avatar_url: "https://images.unsplash.com/photo-1524250502761-1ac6ce638bc8?w=200&h=200&fit=crop&crop=face",
+    portrait_url: "https://images.unsplash.com/photo-1524250502761-1ac6ce638bc8?w=800&h=500&fit=crop",
     quote: "My body didn't know what time of day it was, and neither did my mind.",
     story: [
       "Working rotating shifts in healthcare meant that my sleep schedule was constantly changing. One week nights, one week days, one week mornings. My body never adapted. I was perpetually jet-lagged.",
@@ -168,8 +168,8 @@ const stories = [
   },
   {
     name: "Alex", age: 31, identity: "Sleep & Anxiety",
-    avatar_url: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face",
-    portrait_url: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&h=500&fit=crop&crop=top",
+    avatar_url: "https://images.unsplash.com/photo-1528892952291-009c663ce843?w=200&h=200&fit=crop&crop=face",
+    portrait_url: "https://images.unsplash.com/photo-1528892952291-009c663ce843?w=800&h=500&fit=crop",
     quote: "I couldn't sleep because I was anxious, and I was anxious because I couldn't sleep.",
     story: [
       "My anxiety peaked at night. Once the lights were out and the day ended, my brain would spin through all the things I was worried about. Every thought felt urgent and catastrophic in the darkness. Sleep became impossible.",
@@ -183,8 +183,8 @@ const stories = [
   },
   {
     name: "Maria", age: 45, identity: "Menopause & Sleep",
-    avatar_url: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=200&h=200&fit=crop&crop=face",
-    portrait_url: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=800&h=500&fit=crop&crop=top",
+    avatar_url: "https://images.unsplash.com/photo-1488716820095-cbe80883c496?w=200&h=200&fit=crop&crop=face",
+    portrait_url: "https://images.unsplash.com/photo-1488716820095-cbe80883c496?w=800&h=500&fit=crop",
     quote: "My body changed and I wasn't prepared for what that meant for my sleep.",
     story: [
       "Perimenopause hit me like a surprise attack. I had been sleeping fine my whole life. Suddenly I was waking up at 3am in night sweats. I couldn't fall back asleep. Within weeks, I was exhausted and irritable.",
@@ -198,8 +198,8 @@ const stories = [
   },
   {
     name: "Thomas", age: 38, identity: "Sleep Hygiene & Recovery",
-    avatar_url: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&h=200&fit=crop&crop=face",
-    portrait_url: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&h=500&fit=crop&crop=top",
+    avatar_url: "https://images.unsplash.com/photo-1524250502761-1ac6ce638bc8?w=200&h=200&fit=crop&crop=face",
+    portrait_url: "https://images.unsplash.com/photo-1524250502761-1ac6ce638bc8?w=800&h=500&fit=crop",
     quote: "I thought good sleep hygiene meant discipline. It actually meant giving myself permission to rest.",
     story: [
       "I was one of those people who prided myself on functioning on five hours of sleep. I saw sleep as time wasted when I could be productive. I optimised everything else — exercise, diet, work — but I was cavalier about sleep.",
@@ -271,8 +271,8 @@ function showStory(index) {
     <span class="story-identity-badge" style="background:#DDD6FE;color:#8B5CF6;border-color:#8B5CF6">${s.identity}</span>
     <div class="portrait-wrap"><img src="${s.portrait_url}" alt="${s.name}"/></div>
     <div class="story-body">${storyParas}</div>
-    <div class="story-highlight" style="border-color:#8B5CF6;background:#DDD6FE;color:#4C1D95">"${s.highlight}"</div>
-    <div class="story-takeaway" style="border-color:#8B5CF6;background:rgba(255,255,255,0.8)">
+    <div class="story-highlight" style="border-color:#8B5CF6;background:#DDD6FE;color:#8B5CF6">"${s.highlight}"</div>
+    <div class="story-takeaway" style="border-color:#8B5CF6;background:rgba(139,92,246,0.8)">
       <span class="takeaway-label" style="color:#8B5CF6">😴 Something to sit with</span>
       ${s.takeaway}
     </div>
